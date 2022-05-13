@@ -8,13 +8,11 @@ if [ $files_count -eq 0 ]
 then
     echo Plików:
 else
-    f=$(printf "%-${files_count}s" "+")
-    echo Plików: "${f// /+}"
+    echo Plików: $(printf "%0.s+" $(seq 1 $files_count))
 fi
 if [ $dir_count -eq 0 ]
 then
     echo Katalogów:
 else
-    d=$(printf "%-${dir_count}s" "+")
-    echo Katalogów: "${d// /+}"
+    echo Katalogów: $(printf "%0.s+" $(seq 1 $dir_count))
 fi
