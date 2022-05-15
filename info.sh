@@ -1,4 +1,8 @@
 #!/bin/bash
+if [ "$#" -gt 0 ]; then 
+    exit 0
+fi
+
 files_count=$(ls -l . | egrep -c '^-')
 dir_count=$(ls -l . | egrep -c '^d')
 
